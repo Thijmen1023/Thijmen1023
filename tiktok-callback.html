@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipStudio TikTok sign-in</title>
+<meta name="robots" content="noindex">
+<style>body{margin:0;background:#0e0f13;color:#e9ebf1;font:16px/1.6 system-ui,Segoe UI,sans-serif;display:grid;place-items:center;height:90vh;text-align:center}a{color:#a78bfa}</style>
+</head>
+<body>
+<main>
+  <h2>Returning to ClipStudio…</h2>
+  <p>This page only forwards the TikTok sign-in to ClipStudio running on your own computer. Nothing is stored here.</p>
+  <p><a id="go" href="#">Click here if nothing happens</a></p>
+</main>
+<script>
+  // Stuurt de TikTok-login door naar ClipStudio op je eigen pc (de code blijft in de adresbalk, niets wordt opgeslagen)
+  var target = 'http://127.0.0.1:5055/oauth/tiktok/callback/' + location.search;
+  document.getElementById('go').href = target;
+  location.replace(target);
+</script>
+</body>
+</html>
